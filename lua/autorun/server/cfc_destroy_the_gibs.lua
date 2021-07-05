@@ -5,7 +5,7 @@ local noGibModels = {
 
 hook.Add( "PropBreak", "CFC_NoGibs_RemovePropOnBreak", function( attacker, prop )
     if not IsValid( prop ) then return end
-	
+
     local model = prop:GetModel()
     model = string.Replace( model, "\\", "/" )
     model = string.lower( model )
