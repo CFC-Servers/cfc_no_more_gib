@@ -1,6 +1,7 @@
 local noGibModels = {
     ["models/props/cs_office/computer_caseb.mdl"] = true,
-    ["models/props/cs_office/computer_monitor.mdl"] = true
+    ["models/props/cs_office/computer_monitor.mdl"] = true,
+    ["models/props/cs_office/phone.mdl"] = true
 }
 
 hook.Add( "PropBreak", "CFC_NoGibs_RemovePropOnBreak", function( attacker, prop )
