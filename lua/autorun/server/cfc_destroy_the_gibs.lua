@@ -5,7 +5,7 @@ local noGibModels = {
     ["models/props/cs_office/radio.mdl"] = true
 }
 
-hook.Add( "PropBreak", "CFC_NoGibs_RemovePropOnBreak", function( attacker, prop )
+hook.Add( "PropBreak", "CFC_NoGibs_RemovePropOnBreak", function( _, prop )
     if not IsValid( prop ) then return end
 
     local model = prop:GetModel()
@@ -15,4 +15,4 @@ hook.Add( "PropBreak", "CFC_NoGibs_RemovePropOnBreak", function( attacker, prop 
     if not noGibModels[model] then return end
 
     prop:Remove()
-end)
+end )
